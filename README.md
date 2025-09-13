@@ -8,4 +8,6 @@
 - [Facade](./facade/)
 
 **Behavioral**
+- [State](./state/)
 - [Strategy](./strategy/)
+- [Observer](./observer/)
