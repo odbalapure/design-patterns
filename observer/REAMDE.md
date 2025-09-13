@@ -169,6 +169,13 @@ The subject **does not care who the observers are** -- it just sends updates.
 - Maintains an internal list of `FitnessDataObserver` objects.
 - When data is pushed, it updates its internal state and calls `notifyObservers()` to broadcast the change.
 
+**NOTE:** Other classes that could implement the `FitnessDataSubject` interface are any classes that need to notify observers about changes in their state. Examples include:
+- `HeartRateMonitor`: Notifies observers when heart rate data changes.
+- `SleepTracker`: Notifies observers about sleep pattern updates.
+- `WaterIntakeTracker`: Notifies observers when water intake is logged.
+- `WorkoutSession`: Notifies observers about workout progress or completion.
+- `NutritionLog`: Notifies observers when new nutrition data is added.
+
 ### Concrete Observers (eg: LiveActivityDisplay)
 
 - Implements `FitnessDataObserver`.
