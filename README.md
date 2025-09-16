@@ -14,6 +14,6 @@
 - [Observer](./observer/)
 - [Chain of responsibility](./chainofresponsbility/)
 
-Misc
+**Miscellaneous**
 - [Producer Consumer](./producerconsumer/)
 - [Thread pool](./threadpool/)

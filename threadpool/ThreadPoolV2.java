@@ -24,13 +24,17 @@ public class ThreadPoolV2 {
         }
 
         // NOTE: Crucial to shutdown executor service
-        // `shutdown()` will allow previously submitted task to execute before
-        // terminating
+        // It initiates orderly shutdown; stops accepting new tasks but
+        // allows all previously submitted tasks to finish execution before the pool is
+        // terminated.
         executor.shutdown();
 
         try {
+            // Wait for 60s for all the tasks in the thread pool to finish
+            // If all tasks finish within 60s it returns `true`
+            // Else if returns `false` and terminate the thread pool forcefully.
             if (!executor.awaitTermination(60, TimeUnit.SECONDS)) {
-
+                executor.shutdownNow();
             }
         } catch (InterruptedException e) {
             executor.shutdownNow();
