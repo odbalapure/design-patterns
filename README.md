@@ -3,6 +3,8 @@
 **Creational**
 - [Singleton](./singleton/)
 - [Factory](./factory/)
+- [Builder](./builder/)
+- [Decorator](./decorator/)
 
 **Structural**
 - [Composite](./composite/)
